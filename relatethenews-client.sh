@@ -4,13 +4,13 @@
 # NO Warranty is expressed or implied with this script.
 
 ##### BEGIN ACCESS CONFIG #####
-# 
+#
 # All values below will be provided
 # by RelateTheNews to licensed users
 #
-# Each of the following can be specified at runtime 
+# Each of the following can be specified at runtime
 # if interactivity section remains (see below)
-# or provided here to have a fully autonomous 
+# or provided here to have a fully autonomous
 # API client.
 #
 ###############################
@@ -37,15 +37,15 @@ REFERRER="RelateTheNews Client ID NNNN"
 # Should script interactively prompt for connection information
 INTERACTIVE=true
 
-# Location and Name of file to contain 
-# output from API requests. 
-# 
+# Location and Name of file to contain
+# output from API requests.
+#
 # NOTE: ALL output for a given year, month, day is appended
 #   to this file. This means that ALL endpoint data will be
-#   in the specified OUTFILE. Additionally all subsequent 
-#   requests on the same year, month, day will be in the 
+#   in the specified OUTFILE. Additionally all subsequent
+#   requests on the same year, month, day will be in the
 #   same OUTFILE.
-# 
+#
 # Default provides a file with year-month-day appended
 OUTFILE="relatethenews-apiresults-$(date +%Y%m%d).out"
 
@@ -89,7 +89,7 @@ then
 	fi
 
 	if [ -n "$CUSTOMPASSWORD" ]
-	then 
+	then
 		PASSWORD=$CUSTOMPASSWORD
 	fi
 fi
@@ -113,9 +113,9 @@ printf "#### Standard Options: $STDOPTIONS \n" >> $LOGFILE
 
 ## BEGIN LOGIN SEQUENCE ##
 #
-# This sequence MUST precede 
+# This sequence MUST precede
 # an API call or sets of API calls
-# 
+#
 ##########################
 URI="SAMPLELOGIN"
 DATA="email=$EMAIL&password=$PASSWORD"
